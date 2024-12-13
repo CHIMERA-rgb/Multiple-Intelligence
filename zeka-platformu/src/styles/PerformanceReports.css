@@ -1,0 +1,177 @@
+/* Genel Sayfa Stil Ayarları */
+.performance-reports {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #2b2d42;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2, h3, h4 {
+    color: #2b2d42;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    font-size: 1rem;
+    color: #2b2d42;
+  }
+  
+  .filter-section select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-section select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Report Content */
+  .report-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .graph-placeholder {
+    background-color: #ececec;
+    height: 350px; /* Yükseklik arttırıldı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .graph-placeholder p {
+    color: #777;
+    font-size: 1.2rem;
+  }
+  
+  .student-performance, .overall-assessment, .student-summary, .performance-statistics {
+    margin-top: 30px;
+  }
+  
+  .performance-details, .suggestions {
+    margin-top: 10px;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .performance-details h4, .suggestions h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .performance-details ul, .suggestions p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .performance-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* General Table Styling */
+  .summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  .summary-table table th, .summary-table table td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .summary-table table th {
+    background-color: #2b2d42;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  .summary-table table td {
+    background-color: #fafafa;
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  .summary-table table tr:nth-child(even) td {
+    background-color: #f4f7f6;
+  }
+  
+  /* Performans İstatistikleri */
+  .performance-statistics {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .performance-statistics .stat-chart {
+    background-color: #ececec;
+    height: 350px; /* Yükseklik arttırıldı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .performance-statistics .stat-chart p {
+    color: #777;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .filter-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-section select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .report-content {
+      padding: 15px;
+    }
+  
+    .graph-placeholder {
+      height: 250px; /* Daha küçük cihazlar için küçültüldü */
+    }
+  
+    .summary-table table {
+      font-size: 0.9rem;
+    }
+  }
+  

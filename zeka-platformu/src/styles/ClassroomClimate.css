@@ -1,0 +1,260 @@
+/* Genel Sayfa Ayarları */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sayfa Genel Yapı */
+.classroom-climate {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Başlıklar */
+h1, h2 {
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #2f3640;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #34495e;
+    margin-top: 10px;
+}
+
+/* Ana buton */
+.tips-toggle {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.tips-toggle:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.tips-toggle:focus {
+    outline: none;
+}
+
+/* Modal Penceresi */
+.tips-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.tips-modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tips-modal .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease, opacity 0.4s ease;
+}
+
+.tips-modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tips-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.tips-modal .close-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #bdc3c7;
+}
+
+.tips-modal .close-icon:hover {
+    color: #e74c3c;
+}
+
+/* İçerik Bölümü */
+.feedback-panel {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.feedback-panel .feedback-item {
+    background-color: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feedback-panel .feedback-item:hover {
+    background-color: #ecf0f1;
+    transform: translateY(-5px);
+}
+
+.feedback-item p {
+    font-size: 1rem;
+    color: #2f3640;
+}
+
+.feedback-item textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #dcdfe1;
+    background-color: #f4f7fa;
+    font-size: 1rem;
+    color: #7f8c8d;
+    transition: border-color 0.3s ease;
+}
+
+.feedback-item textarea:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+}
+
+/* Kartlar */
+.content-section .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.content-section .card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.content-section .card .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.content-section .card h3 {
+    font-size: 1.4rem;
+    color: #2f3640;
+    margin-bottom: 10px;
+}
+
+.content-section .card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* İletişim Stratejileri */
+.communication-strategies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.strategy-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.strategy-card .icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.strategy-card h3 {
+    font-size: 1.3rem;
+    color: #2f3640;
+    margin-bottom: 10px;
+}
+
+.strategy-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Genel Butonlar */
+.feedback-toggle {
+    background-color: #b60000;
+    margin-top: 50px;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.feedback-toggle:hover {
+    background-color: #ff0000;
+}
+

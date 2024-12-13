@@ -1,0 +1,76 @@
+.teacher-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .dashboard-sections a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+  }
+  
+  .dashboard-sections button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .dashboard-sections button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .dashboard-sections button:active {
+    background-color: #1c5980;
+    transform: translateY(0);
+  }
+  
+  /* Yeni Özel Buton Tasarımı */
+  .special-button {
+    background-color: #e67e22;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .special-button:hover {
+    background-color: #d35400;
+  }
+  
+  .special-button:active {
+    background-color: #a84300;
+  }
+  

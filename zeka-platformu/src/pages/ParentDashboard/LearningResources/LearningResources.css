@@ -1,0 +1,223 @@
+/* Genel Sayfa Stili */
+.learning-resources {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh; /* Sayfanın tamamını kapsaması için */
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Başlangıçtaki gradyan */
+    animation: gradientAnimation 15s ease infinite; /* Animasyonu ekliyoruz */
+}
+
+/* Gradyan Arka Plan Animasyonu */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #6a11cb, #2575fc); /* Mor ve lacivert */
+    }
+    50% {
+        background: linear-gradient(45deg, #2575fc, #6a11cb); /* Lacivert ve mor geçişi */
+    }
+    100% {
+        background: linear-gradient(45deg, #6a11cb, #2575fc); /* Başlangıca geri dön */
+    }
+}
+
+/* Diğer stiller burada aynı şekilde kalır... */
+
+/* Uçuşan Öğeler - Kalem, Defter, Silgi vb. */
+@keyframes floatItems {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-100px, 100px);
+    }
+    100% {
+        transform: translate(100px, -100px);
+    }
+}
+
+.learning-resources .floating-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.learning-resources .floating-items span {
+    position: absolute;
+    animation: floatItems 8s ease-in-out infinite;
+}
+
+.learning-resources .floating-items .pen {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.learning-resources .floating-items .notebook {
+    top: 25%;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.learning-resources .floating-items .eraser {
+    top: 60%;
+    left: 65%;
+    animation-delay: 4s;
+}
+
+/* Başlık (Header) Stili */
+.learning-resources h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+.learning-resources header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+/* Kategoriler Butonları */
+.learning-resources .categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    margin-bottom: 30px;
+}
+
+.learning-resources .categories button {
+    flex: 1;
+    background-color: #1184b1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+/* Hover Rengi */
+.learning-resources .categories button:hover {
+    background-color: #006c74;
+    color: white;
+}
+
+/* Aktif Buton (Kalıcı Hover Rengi) */
+.learning-resources .categories button.active {
+    background-color: #006c74;
+    color: white;
+    font-weight: bold;
+}
+
+/* Akordiyon Bölümü */
+.learning-resources .accordion {
+    margin: 0 10%;
+}
+
+.learning-resources .accordion-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Akordiyon Başlık */
+.learning-resources .accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.learning-resources .accordion-header:hover {
+    background-color: #e2e2e2;
+}
+
+.learning-resources .accordion-header span.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.learning-resources .accordion-header h3 {
+    flex: 1;
+}
+
+.learning-resources .accordion-header span {
+    font-size: 1.2rem;
+}
+
+.learning-resources .accordion-header.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.learning-resources .accordion-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.learning-resources .accordion-item.active .accordion-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Akordiyon Açılıp Kapanma Animasyonu */
+.learning-resources .accordion-item .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.3s ease-out;
+}
+
+.learning-resources .accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 20px;
+}
+
+/* Linkler */
+.learning-resources .accordion-content a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.learning-resources .accordion-content a:hover {
+    color: #333;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .learning-resources .categories {
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    .learning-resources .categories button {
+        margin-bottom: 10px;
+    }
+
+    .learning-resources {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,148 @@
+/* Tüm stiller sadece .suggestions-tab-container içinde geçerli */
+.suggestions-tab-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .suggestions-tab-container .header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degrade arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff; /* Yazıların beyaz rengi */
+    display: flex;
+    justify-content: space-between; /* Başlık ve alt başlık arasındaki boşluğu maksimize et */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  }
+  
+  .suggestions-tab-container .header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Resim ve başlık arasındaki boşluk */
+  }
+  
+  .suggestions-tab-container .header-title {
+    font-size: 24px; /* Başlık büyüklüğü */
+    font-weight: bold;
+    margin: 10px 0 0; /* Üstte 10px boşluk bırak */
+    color: #ffd700; /* Altın sarısı renk */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+  }
+  
+  
+  .suggestions-tab-container .intelligence-image {
+    width: 60px; /* Daha büyük boyut */
+    height: 60px;
+    border-radius: 50%; /* Tamamen yuvarlak */
+    border: 3px solid #fff; /* Resme çerçeve */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  }
+  
+  .suggestions-tab-container .intelligence-image {
+    width: 60px; /* Daha büyük boyut */
+    height: 60px;
+    border-radius: 50%; /* Tamamen yuvarlak */
+    border: 3px solid #fff; /* Resme çerçeve */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  }
+  
+  .suggestions-tab-container .suggestions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .suggestions-tab-container .suggestion-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    display: flex; /* Flexbox kullanarak iç elemanları hizalayacağız */
+    justify-content: space-between; /* Başlık ve buton arasındaki boşluğu maksimize et */
+    align-items: center; /* Yatayda ortalayacağız */
+}
+  
+  .suggestions-tab-container .suggestion-item.completed {
+    background: #e0ffe0;
+  }
+  
+  .suggestions-tab-container .suggestion-title {
+    font-size: 18px;
+    margin: 0 0 5px;
+  }
+  
+  .suggestions-tab-container .suggestion-description {
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+  
+  .suggestions-tab-container .suggestion-date {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .suggestions-tab-container .mark-complete-btn {
+    padding: 5px 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .suggestions-tab-container .mark-complete-btn:hover {
+    background: #218838;
+  }
+  
+  .suggestions-tab-container .header-subtitle {
+    font-size: 14px; /* Alt başlık boyutu */
+    color: #f0f0f0;
+    font-style: italic;
+    margin: 0;
+    text-align: right; /* Sağ tarafa hizala */
+  }
+
+  .suggestions-tab-container .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #ff4081, #4caf50); /* Canlı mavi ve pembe tonları */
+    color: white; /* Yazı rengi beyaz */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 18px;
+    animation: fadeInOut 3s ease-in-out;
+    text-align: center;
+    max-width: 80%;
+}
+
+.suggestions-tab-container .popup p {
+    color: #ffffff; /* Pop-up içindeki yazı beyaz */
+    font-weight: bold;
+    font-size: 20px; /* Yazıyı biraz büyütüyoruz */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+}

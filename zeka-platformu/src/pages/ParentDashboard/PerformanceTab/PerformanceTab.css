@@ -1,0 +1,268 @@
+/* PerformanceTab sayfasına özgü header stili */
+.performance-tab .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #68a0b0, #a6c2d6); /* Mavi tonlarıyla dinamik bir arka plan */
+  color: white;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.performance-tab .header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.performance-tab .general-performance {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgba(0, 123, 255, 0.7); /* Mavi renkli başarı göstergesi */
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.performance-tab .general-performance:hover {
+  background-color: #0056b3;
+}
+
+/* Performans grafiği kısmı */
+.performance-section {
+  margin-bottom: 50px;
+}
+
+.performance-section h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.performance-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.performance-section .recharts-responsive-container {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 40px;
+}
+
+/* Görev Tamamlama Durumu */
+.task-status {
+  margin-bottom: 50px;
+}
+
+.task-status h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.task-status p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.task-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+  background-color: #fff;
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.task-item:hover {
+  transform: scale(1.05);
+}
+
+.task-item span {
+  font-weight: bold;
+}
+
+/* Tamamlanan görevler */
+.task-item.completed {
+  background-color: #eaf9ea;
+  border-left: 5px solid #28a745;
+  color: #28a745;
+}
+
+/* Eksik görevler */
+.task-item.overdue,
+.task-item.pending {
+  background-color: #f8d7da;
+  border-left: 5px solid #dc3545;
+  color: #dc3545;
+}
+
+/* Evde Yapılacak Aktiviteler */
+.suggestions {
+  margin-bottom: 50px;
+}
+
+.suggestions h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.suggestions p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.suggestions ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.suggestions li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.suggestions li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
+  font-size: 18px;
+}
+
+/* Footer ve buton */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.message-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  max-width: 350px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.message-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.message-btn:focus {
+  outline: none;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+  .performance-tab {
+    width: 100%;
+    max-width: 1200px; /* Sayfa genişliğini sabitleyin */
+    margin: 0 auto; /* İçeriği yatayda ortalar */
+    padding: 20px;
+  }
+
+  .header h1 {
+    margin-top: 102px;
+    font-size: 28px;
+  }
+
+  .general-performance {
+    font-size: 1rem;
+    color: #007bff; /* Başarı durumu için mavi renk */
+    font-weight: bold;
+  }
+  .performance-section h2,
+  .task-status h2,
+  .suggestions h2 {
+    font-size: 20px;
+  }
+
+  .performance-section p,
+  .task-status p,
+  .suggestions p {
+    font-size: 14px;
+  }
+
+  .task-list {
+    padding: 15px;
+  }
+
+  .message-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* İlerleme çubuğu */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+/* Aktivite ikonları */
+.activity-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.student-avatar {
+  width: 80px; /* Resmi istediğiniz boyuta göre ayarlayın */
+  height: 80px;
+  border-radius: 20%; /* Resmi yuvarlak yapmak için */
+  object-fit: cover; /* Resmi kutuya sığdırmak için */
+  border: 2px solid #007bff; /* Resmin etrafında ince bir mavi çerçeve */
+}

@@ -1,0 +1,40 @@
+.tasks-tab {
+    font-family: 'Arial', sans-serif;
+}
+
+.tasks-tab h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.tasks-tab ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tasks-tab li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.tasks-tab li.completed {
+    background-color: #d4edda;
+}
+
+.tasks-tab li.incomplete {
+    background-color: #f8d7da;
+}
+
+.tasks-tab li .task-title {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.tasks-tab li .due-date {
+    font-size: 1rem;
+    color: #666;
+}

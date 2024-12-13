@@ -1,0 +1,214 @@
+/* Genel Profil Stili */
+.student-profile {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Profil Resmi */
+  .student-profile-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .student-profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1abc9c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* İletişim Bilgileri */
+  .contact-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  /* Performans Özeti */
+  .performance {
+    margin-top: 40px;
+  }
+  
+  .performance h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Performans Başarıları */
+  .performance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .performance-list li {
+    background-color: #ecf0f1;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Başarılar */
+  .achievements {
+    margin-top: 40px;
+  }
+  
+  .achievements input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    color: #2c3e50;
+    transition: border-color 0.3s ease;
+  }
+  
+  .achievements input:focus {
+    border-color: #1abc9c;
+  }
+  
+  .achievements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .achievements li {
+    background-color: #ecf0f1;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .achievements li em {
+    font-style: italic;
+    color: #95a5a6;
+  }
+  
+  /* Gelişim Önerileri */
+  .development-suggestions {
+    margin-top: 40px;
+  }
+  
+  .development-suggestions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .development-suggestions li {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .development-suggestions li::before {
+    content: '⚠';
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* Eylem Butonları */
+  .actions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  
+  .actions button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .actions button:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+  }
+  
+  .modal div {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal button {
+    padding: 12px 25px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: #c82333;
+  }
+  

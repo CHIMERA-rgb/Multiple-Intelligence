@@ -1,0 +1,194 @@
+/* İçerik Yönetimi Container'ı */
+.content-management-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 400px; /* Panelin minimum yüksekliği */
+}
+
+/* Başlık Stili */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Başlık Stili */
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Tablo Stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Elemanları */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 sütun düzeni */
+    gap: 20px; /* Elemanlar arasındaki boşluk */
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Textarea (Özet Alanı) */
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Form Etiketleri */
+form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Dosya Yükleme Butonu */
+form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Buton Stili */
+button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Onay, Red ve Bekleme Butonları */
+button.approve {
+    background-color: #3bc240;
+    color: white;
+}
+
+button.reject {
+    background-color: #ff1100;
+    color: white;
+}
+
+button.pending {
+    background-color: #ff9900;
+    color: white;
+}
+
+/* Buton Hover Efekti */
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* Button Focus State */
+button:focus {
+    outline: none;
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+    .content-management-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    form input[type="text"],
+    form select,
+    form textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 14px;
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Mobilde tek sütun düzeni */
+    }
+}
+
+/* Popup Stili */
+.popup {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1000;
+    width: 300px;
+    transition: opacity 0.5s ease-out;
+}
+
+.popup-message {
+    text-align: center;
+}
+
+.popup .progress-bar {
+    height: 5px;
+    background-color: #4caf50;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 5px;
+    background-color: #4caf50;
+    margin-bottom: 5px;
+    transition: width 1s linear;
+}

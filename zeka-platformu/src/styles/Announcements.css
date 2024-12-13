@@ -1,0 +1,228 @@
+/* Genel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  .announcement-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Form stili */
+  .announcement-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .announcement-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .announcement-form input,
+  .announcement-form select,
+  .announcement-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .announcement-form input[type="date"] {
+    padding: 8px;
+  }
+  
+  .announcement-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .announcement-form button:hover {
+    background-color: #2980b9;
+  }
+  
+  .announcement-filter {
+    margin: 20px 0;
+  }
+  
+  .announcement-filter label {
+    font-size: 1rem;
+  }
+  
+  .announcement-filter select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Duyuru listesi */
+  .announcements-list {
+    margin-top: 20px;
+  }
+  
+  .announcement-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .announcement-item h4 {
+    margin-bottom: 10px;
+  }
+  
+  .announcement-meta p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .announcement-meta strong {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .announcement-meta .badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .announcement-meta .active {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  .announcement-meta .expired {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .announcement-meta .scheduled {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  /* Eylem butonları */
+  button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Dosya önizleme */
+  .announcement-item a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1rem;
+  }
+  
+  .announcement-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Filtreleme ve sıralama */
+  .announcement-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  /* Açıklama kısmına kaydırma ve yükseklik belirleme */
+  .announcement-item .announcement-description {
+    max-height: 100px;  /* Yüksekliği daha da sınırlandırdık */
+    overflow-y: auto;   /* Dikey kaydırma ekleme */
+    padding-right: 10px; /* Sağdan boşluk ekleyerek kaydırma çubuğunun görünmesini sağla */
+    width: 100%;         /* Genişliği %100, böylece panelin genişliğini aşmaz */
+    word-wrap: break-word; /* Uzun kelimelerin kırılması */
+    text-overflow: ellipsis; /* Fazla metin için elips gösterimi */
+    line-height: 1.4;  /* Satır yüksekliğini kısıtlayarak daha kompakt hale getirme */
+  }
+  
+  /* Responsive tasarım */
+  @media screen and (max-width: 768px) {
+    .announcement-form {
+      padding: 15px;
+    }
+  
+    .announcement-item {
+      padding: 15px;
+    }
+  
+    .announcement-meta p {
+      font-size: 0.9rem;
+    }
+  
+    .announcement-form button {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .announcement-item h4 {
+      font-size: 1rem;
+    }
+  
+    .announcement-filter select {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+  

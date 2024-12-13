@@ -1,0 +1,186 @@
+/* Genel Sayfa Yapısı */
+.reward-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+}
+
+/* Ana Panel */
+.rewards-panel {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.rewards-panel:hover {
+    transform: translateY(-10px); /* Hover efekti */
+}
+
+/* Başlıklar */
+.reward-page h1, .reward-page h2, .reward-page h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Açıklama */
+.reward-page .description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Arama Çubuğu */
+.reward-page .search-bar input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+}
+
+.reward-page .search-bar input:focus {
+    border-color: #3b82f6;
+}
+
+/* Öğrenci Seçim Alanı */
+.reward-page .student-selection select {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.reward-page .student-selection select:hover {
+    background-color: #f1f5f9;
+}
+
+/* Kategori Seçimi */
+.reward-page .category-filter select {
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.reward-page .category-filter select:hover {
+    background-color: #f1f5f9;
+}
+
+/* Öğrenci Bilgileri */
+.reward-page .student-rewards {
+    border: 1px solid #ddd;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Ödüller Listesi */
+.reward-page .student-rewards ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.reward-page .student-rewards li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* Onay ve Mesajlar */
+.reward-page .confirmation {
+    background-color: #f9fafb;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reward-page .confirmation button {
+    padding: 12px 20px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reward-page .confirmation button:hover {
+    background-color: #45a049;
+}
+
+.reward-page .reward-message {
+    margin-top: 20px;
+    background-color: #e1f8d3;
+    padding: 15px;
+    border-radius: 8px;
+    color: #4caf50;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Performans Gösteren Öğrenciler */
+.reward-page .top-performers ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.reward-page .top-performers li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    background-color: #f1f5f9;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reward-page .top-performers li:nth-child(odd) {
+    background-color: #e8f4fc;
+}
+
+/* Animasyon ve Hover Efektleri */
+.reward-page .student-rewards li:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.reward-page .confirmation button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4);
+}
+
+.reward-page .reward-message {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

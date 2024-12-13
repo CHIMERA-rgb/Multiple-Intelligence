@@ -1,0 +1,87 @@
+/* ParentDashboard.css */
+
+/* Genel Stil */
+.parent-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fa;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Butonlar Konteyneri */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Butonlar */
+.main-button {
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 60px; /* Tüm butonların aynı boyutta olmasını sağlamak için */
+  width: 100%; /* Butonlar genişliğini alacak */
+
+}
+
+/* Buton Hover Efekti */
+.main-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconlar ve Buton Metni */
+.button-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Buton Renklerine Özel Stil */
+.button-messaging {
+  background-color: #00BFFF;
+}
+
+.button-performance {
+  background-color: #FF6347;
+}
+
+.button-suggestions {
+  background-color: #FFD700;
+}
+
+.button-learning-resources {
+  background-color: #8A2BE2;
+}
+
+.button-extracurricular {
+  background-color: #FF1493;
+}
+
+/* Küçük Ekranlar İçin Buton Düzeni */
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobil Ekranlar İçin Buton Düzeni */
+@media (max-width: 480px) {
+  .button-container {
+    grid-template-columns: 1fr;
+  }
+}

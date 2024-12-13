@@ -1,0 +1,162 @@
+/* AdminDashboard.css */
+
+/* Genel tasarım için temel stil */
+.admin-dashboard {
+    padding: 40px;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Scroll yapısı ekliyoruz */
+    scrollbar-width: thin; /* Firefox için scroll genişliği */
+    scrollbar-color: #007bff #f4f7fa; /* Scroll renklerini belirleme */
+  }
+  
+  /* Sayfa içeriği üzerine gelindiğinde scroll bar'ların görünmesi */
+  .admin-dashboard::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .admin-dashboard::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+  }
+  
+  .admin-dashboard::-webkit-scrollbar-track {
+    background-color: #f4f7fa;
+  }
+  
+  /* Başlık kısmı */
+  .admin-dashboard h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    animation: fadeInDown 1s ease-out; /* Animasyon ekliyoruz */
+  }
+  
+  /* Butonların sarmaladığı ana container */
+  .admin-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  /* Her buton için stil */
+  .admin-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    transform: scale(1); /* Buton normal boyutta */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .admin-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Hoverda butonu büyütüyoruz */
+  }
+  
+  .admin-button:active {
+    background-color: #003f7d;
+    transform: scale(0.98); /* Tıklanıldığında buton küçülür */
+  }
+  
+  /* Button içeriği için ikonları da yerleştiriyoruz */
+  .admin-button i {
+    margin-right: 8px;
+  }
+  
+  /* Panel başlıkları */
+  .panel-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+    animation: slideInFromLeft 1s ease-out; /* Animasyon ekliyoruz */
+  }
+  
+  /* İçerik kutuları */
+  .panel-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px 0;
+    animation: fadeIn 1.5s ease-out; /* Animasyon ekliyoruz */
+  }
+  
+  /* İçerik kutuları responsive uyumu */
+  @media (max-width: 768px) {
+    .admin-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .admin-button {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  
+  /* Arka planda kullanabileceğiniz hafif bir desen */
+  .admin-dashboard {
+    background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  
+  /* Animasyonlar */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
